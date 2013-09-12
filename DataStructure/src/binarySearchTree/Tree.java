@@ -67,7 +67,7 @@ public class Tree {
 
 	public void print() {
 		Print print=new Print(this);
-		print.print();
+		print.printTree();
 		
 	}
 }

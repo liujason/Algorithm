@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import binarySearchTree.Print;
 import binarySearchTree.Tree;
 
 public class TreeTest {
@@ -34,8 +35,26 @@ public class TreeTest {
 	}
 	
 	@Test
-	public final void testPrint(){
-		
+	public final void testInOrderTraversal(){
+		Print print=new Print(tree);
+		assertEquals("1 2 4 5 7 8 9 ", print.traverseInorder());
+	}
+	
+	@Test
+	public final void testPreOrderTraversal(){
+		Print print=new Print(tree);
+		assertEquals("5 2 1 4 8 7 9 ", print.traversePreorder());
+	}
+	
+	@Test
+	public final void testPostOrderTraversal(){
+		Print print=new Print(tree);
+		assertEquals("1 4 2 7 9 8 5 ", print.traversePostorder());
+	}
+	@Test
+	public final void testPostOrderTraversal2(){
+		Print print=new Print(tree);
+		assertEquals("1 4 2 7 9 8 5 ", print.traversePostorder2());
 	}
 
 }
