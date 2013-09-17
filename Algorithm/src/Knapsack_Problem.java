@@ -24,7 +24,8 @@ public class Knapsack_Problem {
 		System.out.println("Knapsack total value of "+ks(c,0));
 	}
 	/**
-	 * Recursively figure out the max value of the knapsack problem
+	 * Recursively figure out the max value of the knapsack problem.
+	 * TODO: some part of the recursion call is redundant. Use a table to save the work. 
 	 * @param c
 	 * @param i
 	 * @return
