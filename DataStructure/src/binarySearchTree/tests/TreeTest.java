@@ -22,6 +22,11 @@ public class TreeTest {
 		tree.insert(7);
 		tree.insert(4);
 	}
+	@Test
+	public final void testTreeValidate(){
+		assertTrue(tree.validate());
+	}
+	
 	
 	@Test
 	public final void testGetHeight_recursion() {
@@ -51,10 +56,6 @@ public class TreeTest {
 		Print print=new Print(tree);
 		assertEquals("1 4 2 7 9 8 5 ", print.traversePostorder());
 	}
-	@Test
-	public final void testPostOrderTraversal2(){
-		Print print=new Print(tree);
-		assertEquals("1 4 2 7 9 8 5 ", print.traversePostorder2());
-	}
+
 
 }

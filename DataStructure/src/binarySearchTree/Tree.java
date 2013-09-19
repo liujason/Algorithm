@@ -70,4 +70,33 @@ public class Tree {
 		print.printTree();
 		
 	}
+	
+	//Validates if the tree is a BST by in order traversal
+	public boolean validate(){
+		System.out.println("Validate if tree is BST by in order traversal.");
+		Deque<Node> stack=new ArrayDeque<Node>();
+		Node n=rootNode;
+		int last=Integer.MIN_VALUE;
+		while(!stack.isEmpty()||n!=null){
+			if(n!=null){
+				stack.push(n);
+				n=n.leftNode;
+			}else{
+				n=stack.pop();
+				System.out.print(n.data+" ");
+				if(last==Integer.MIN_VALUE){
+					last=n.data;
+				}else{
+					if(last>n.data){
+						return false;
+					}else{
+						last=n.data;
+					}
+				}
+				n=n.rightNode;
+			}
+		}
+		return true;
+	}
+	
 }
